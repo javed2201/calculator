@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <!-- Include Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+
+  <div class="bg-white p-8 rounded shadow-md">
+    <div class="mb-4">
+      <input type="text" id="display" class="w-full border p-2 rounded" readonly>
+    </div>
+
+    <div class="grid grid-cols-4 gap-2">
+      <button onclick="appendToDisplay('1')" class="col-span-1 btn">1</button>
+      <button onclick="appendToDisplay('2')" class="col-span-1 btn">2</button>
+      <button onclick="appendToDisplay('3')" class="col-span-1 btn">3</button>
+      <button onclick="appendToDisplay('/')" class="col-span-1 btn btn-operator">/</button>
+
+      <button onclick="appendToDisplay('4')" class="col-span-1 btn">4</button>
+      <button onclick="appendToDisplay('5')" class="col-span-1 btn">5</button>
+      <button onclick="appendToDisplay('6')" class="col-span-1 btn">6</button>
+      <button onclick="appendToDisplay('*')" class="col-span-1 btn btn-operator">*</button>
+
+      <button onclick="appendToDisplay('7')" class="col-span-1 btn">7</button>
+      <button onclick="appendToDisplay('8')" class="col-span-1 btn">8</button>
+      <button onclick="appendToDisplay('9')" class="col-span-1 btn">9</button>
+      <button onclick="appendToDisplay('-')" class="col-span-1 btn btn-operator">-</button>
+
+      <button onclick="appendToDisplay('0')" class="col-span-1 btn">0</button>
+      <button onclick="appendToDisplay('.')" class="col-span-1 btn">.</button>
+      <button onclick="calculate()"          class="col-span-1 btn btn-operator">=</button>
+      <button onclick="appendToDisplay('+')" class="col-span-1 btn btn-operator">+</button>
+    </div>
+  </div>
+
+  <!-- <script>
+    function appendToDisplay(value) {
+      document.getElementById('display').value += value;
+    }
+
+    function calculate() {
+      const display = document.getElementById('display');
+      try {
+        display.value = eval(display.value);
+      } catch (error) {
+        display.value = 'Error';
+      }
+    }
+  </script> -->
+
+</body>
+
+</html>
